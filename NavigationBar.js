@@ -41,7 +41,7 @@ define(function(require, exports, module) {
 
         this.back = new Surface({
             size: [this.options.size[1], this.options.size[1]],
-            classes: this.options.backClasses,
+            classes: this.options.backClasses || this.options.classes,
             content: this.options.backContent
         });
         this.back.on('click', function() {
@@ -50,7 +50,7 @@ define(function(require, exports, module) {
 
         this.more = new Surface({
             size: [this.options.size[1], this.options.size[1]],
-            classes: this.options.moreClasses,
+            classes: this.options.moreClasses || this.options.classes,
             content: this.options.moreContent
         });
         this.more.on('click', function() {

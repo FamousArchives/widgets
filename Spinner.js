@@ -154,7 +154,7 @@ define(function(require, exports, module) {
     Spinner.prototype.stop = function(cb) {
         if (this.spinInterval)
             Timer.clear(this.spinInterval);
-        
+
         if (cb)
             cb();
     };

@@ -86,7 +86,7 @@ define(function(require, exports, module) {
         }
     }
 
-    function _spinLineOpacity (i, t, count) {
+    function _spinLineOpacity(i, t, count) {
         var pos = 1-((count-i+t)%count)/count;
         return pos*pos*0.9+0.1;
     }

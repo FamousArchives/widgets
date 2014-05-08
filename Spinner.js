@@ -138,7 +138,7 @@ define(function(require, exports, module) {
         var count = this.spinLineModifiers.length;
         var t = 0;
         this.spinInterval = Timer.setInterval(function() {
-            for(var i = 0; i < count; i++) {
+            for (var i = 0; i < count; i++) {
                 this.spinLineModifiers[i].setOpacity(_spinLineOpacity(i, t, count));
             }
             t++;
@@ -152,12 +152,11 @@ define(function(require, exports, module) {
      */
 
     Spinner.prototype.stop = function(cb) {
-        if (this.spinInterval) {
+        if (this.spinInterval)
             Timer.clear(this.spinInterval);
-        }
-        if (cb) {
+        
+        if (cb)
             cb();
-        }
     };
 
     /**

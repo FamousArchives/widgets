@@ -28,7 +28,7 @@ define(function(require, exports, module) {
      * @param {String} [options.backContent=(&#x25c0;)] Content of the back button.
      * @param {Array.string} [options.classes=(navigation)] CSS Classes attached to the surfaces.
      * @param {String} [options.content] Content to pass into title bar.
-     * @param {Array.string} [options.classes=(more)] CSS Classes attached to the More surface.
+     * @param {Array.string} [options.moreClasses=(more)] CSS Classes attached to the More surface.
      * @param {String} [options.moreContent=(&#x271a;)] Content of the more button.
      */
     function NavigationBar(options) {
@@ -41,7 +41,7 @@ define(function(require, exports, module) {
 
         this.back = new Surface({
             size: [this.options.size[1], this.options.size[1]],
-            classes: this.options.classes,
+            classes: this.options.backClasses || this.options.classes,
             content: this.options.backContent
         });
         this.back.on('click', function() {
@@ -50,7 +50,7 @@ define(function(require, exports, module) {
 
         this.more = new Surface({
             size: [this.options.size[1], this.options.size[1]],
-            classes: this.options.classes,
+            classes: this.options.moreClasses || this.options.classes,
             content: this.options.moreContent
         });
         this.more.on('click', function() {
